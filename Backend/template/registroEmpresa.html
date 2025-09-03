@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        /* General Styles */
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #e0f7f1; /* Fondo verde suave */
+            margin: 0;
+            padding: 0;
+            color: #e6e4e4;
+        }
+        .container { 
+            max-width: 700px; 
+            margin: 20px auto;
+            background-color: #eae8e8f3; /* Fondo oscuro para contenedor */
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h2 { 
+            color: #4caf50; /* Blanco para el título principal */
+            font-size: 26px; 
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        p { 
+            font-size: 16px; 
+            margin: 10px 0;
+            color: #111111;
+        }
+        .footer { 
+            margin-top: 30px; 
+            font-size: 12px; 
+            color: #0d0d0d; /* Color claro para texto del pie de página */
+            text-align: center; 
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        /* Header with logo */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 250px;
+            height: auto;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 25px;
+            border-bottom: 3px solid #4caf50; /* Línea de separación con color verde */
+            padding-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #4caf50; /* Verde claro para los títulos */
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px; /* Espacio entre ícono y texto */
+        }
+
+        .info { 
+            padding: 15px;
+            background-color: #f1f1f1; /* Fondo claro para la información */
+            border-radius: 5px;
+            margin-top: 5px;
+            color: #333; /* Texto oscuro para mejor legibilidad */
+        }
+
+        /* Emphasize email and phone */
+        .emphasized {
+            font-weight: bold;
+            text-decoration: underline; /* Subraya los números y correos */
+           
+        }
+
+        /* Caja con sombreado de dos colores */
+        .info-box {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #eaebea 30%, #f3f5f3 70%); /* Degradado de verde */
+            color: white;
+            border: 2px solid transparent; /* Borde transparente para mostrar el degradado */
+            background-clip: padding-box; /* Evita que el borde se mezcle con el fondo */
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de profundidad */
+        }
+
+        /* Footer Section */
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with logo -->
+        <div class="header">
+            <img src="https://i.imgur.com/fdFnBmk.png" alt="Logo de la Empresa" class="logo">
+        </div>
+        
+        <h2>¡Nueva Empresa Registrada!</h2>
+        
+        <div class="section">
+            <p class="section-title"><i class="fas fa-building"></i>Información de la Empresa:</p>
+            <div class="info">
+                <div class="info-box">
+                    <p><strong>Empresa:</strong> {{nombreEmpresa}}</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>RNC:</strong> {{rnc}}</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Dirección:</strong> {{direccion}}</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Teléfono:</strong> <span class="emphasized">{{telefono}}</span></p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Email:</strong> <span class="emphasized">{{email}}</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <p class="section-title"><i class="fas fa-user"></i>Información del Usuario Registrante:</p>
+            <div class="info">
+                <div class="info-box">
+                    <p><strong>Nombre y Apellido:</strong> {{nombreUsuario}} {{apellido}}</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Usuario:</strong> {{usuario}}</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Email:</strong> <span class="emphasized">{{adminEmail}}</span></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer">‼️ Este es un mensaje automático. Por favor, no responda este correo. ‼️</p>
+    </div>
+</body>
+</html>
