@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+
 const jwt = require('jsonwebtoken');
 const Usuario = require('../models/LoginUsersModel');
 
