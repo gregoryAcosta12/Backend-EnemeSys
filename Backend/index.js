@@ -41,6 +41,11 @@ app.use('/api/certificaciones', certificacionRoutes);
 app.use('/api/comprobantes', comprobanteRoutes); // ✅ Nueva ruta
 app.use('/api/obtener-encf', secuenciaFacturaRoutes);
 app.use("/api/razon-anulacion", razonAnulacionRoutes);
+// Ruta de prueba
+app.get('/api/test', (req, res) => {
+    res.json({ mensaje: '¡El backend funciona correctamente!' });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
